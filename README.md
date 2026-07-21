@@ -4,6 +4,9 @@
 
 A simple multi-page restaurant website created using **Semantic HTML5** as part of our IPT-101 assignment.
 
+# Live Page : 
+https://lancesusvilla.github.io/week1-semantic-website/
+
 ---
 
 # 📖 Project Overview
