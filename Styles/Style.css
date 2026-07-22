@@ -10,15 +10,23 @@
     box-sizing:border-box;
 }
 
+/* ==================================================
+   CSS VARIABLES
+================================================== */
+
 :root{
 
     --primary:#8B0000;
     --secondary:#DAA520;
     --light:#ffffff;
     --dark:#1a1a1a;
-    --shadow:0 4px 10px rgba(0,0,0,.2);
+    --shadow:0 8px 20px rgba(0,0,0,.25);
 
 }
+
+/* ==================================================
+   BODY
+================================================== */
 
 body{
 
@@ -29,14 +37,20 @@ body{
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-    background-attachment:scroll;
+    background-attachment:fixed;
 
 }
 
+/* ==================================================
+   HEADER
+================================================== */
+
 header{
 
-    background:rgba(139,0,0,.85);
+    background:rgba(139,0,0,.90);
+
     text-align:center;
+
     padding:30px;
 
 }
@@ -44,6 +58,7 @@ header{
 header h1{
 
     font-size:42px;
+
     margin-bottom:20px;
 
 }
@@ -51,7 +66,8 @@ header h1{
 header p{
 
     margin-top:15px;
-    line-height:1.6;
+
+    line-height:1.7;
 
 }
 
@@ -60,26 +76,39 @@ header p{
 ================================================== */
 
 nav{
+
     display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+
+    flex-direction:column;
+
     align-items:center;
+
     gap:15px;
-    margin-top:20px;
+
 }
 
 nav a{
+
     color:white;
+
     text-decoration:none;
+
     font-weight:bold;
-    padding:10px 16px;
+
+    padding:10px 18px;
+
     border-radius:6px;
+
     transition:.3s;
+
 }
 
 nav a:hover{
-    background:#DAA520;
+
+    background:var(--secondary);
+
     color:black;
+
 }
 
 /* ==================================================
@@ -87,35 +116,79 @@ nav a:hover{
 ================================================== */
 
 main{
+
     width:90%;
+
     max-width:1200px;
+
     margin:30px auto;
-    padding:30px;
+
+    padding:35px;
+
     background:rgba(0,0,0,.60);
+
     border-radius:15px;
+
 }
 
 /* ==================================================
-   SECTION
+   HERO
+================================================== */
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+.hero h2{
+
+    color:#FFD700;
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    max-width:800px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+/* ==================================================
+   SECTIONS
 ================================================== */
 
 section{
 
     margin-bottom:50px;
-    text-align:center;
 
 }
 
 section h2{
 
     color:#FFD700;
-    margin-bottom:20px;
+
+    text-align:center;
+
+    margin-bottom:25px;
 
 }
 
 section p{
 
     line-height:1.7;
+
+    text-align:center;
+
     margin-bottom:20px;
 
 }
@@ -127,7 +200,9 @@ section p{
 .product-grid{
 
     display:grid;
+
     grid-template-columns:1fr;
+
     gap:30px;
 
 }
@@ -139,11 +214,14 @@ section p{
 .card{
 
     background:white;
+
     color:black;
+
+    border-radius:15px;
 
     padding:20px;
 
-    border-radius:12px;
+    text-align:center;
 
     box-shadow:var(--shadow);
 
@@ -159,14 +237,15 @@ section p{
 
 .card h3{
 
-    color:#d40000;
-    margin-bottom:10px;
+    color:var(--primary);
+
+    margin-bottom:12px;
 
 }
 
 .card h4{
 
-    margin:15px 0 10px;
+    margin:15px 0;
 
 }
 
@@ -174,14 +253,26 @@ section p{
    IMAGES
 ================================================== */
 
-img{
+.card img{
+
     width:100%;
-    max-width:250px;
-    height:250px;
+
+    aspect-ratio:1/1;
+
     object-fit:cover;
+
     border-radius:12px;
+
+}
+
+img{
+
     display:block;
+
+    max-width:100%;
+
     margin:auto;
+
 }
 
 /* ==================================================
@@ -202,16 +293,6 @@ table{
 
 }
 
-caption{
-
-    font-size:22px;
-
-    font-weight:bold;
-
-    margin-bottom:15px;
-
-}
-
 th{
 
     background:var(--primary);
@@ -223,9 +304,9 @@ th{
 th,
 td{
 
-    padding:12px;
-
     border:1px solid #ccc;
+
+    padding:12px;
 
     text-align:center;
 
@@ -234,6 +315,26 @@ td{
 tr:nth-child(even){
 
     background:#f2f2f2;
+
+}
+
+/* ==================================================
+   ABOUT PAGE LIST
+================================================== */
+
+ul{
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding-left:25px;
+
+}
+
+li{
+
+    margin-bottom:12px;
 
 }
 
@@ -253,11 +354,17 @@ form{
 
     box-shadow:var(--shadow);
 
-    text-align:left;
+    max-width:700px;
+
+    margin:auto;
 
 }
 
 label{
+
+    display:block;
+
+    margin-top:15px;
 
     font-weight:bold;
 
@@ -272,9 +379,7 @@ textarea{
 
     margin-top:8px;
 
-    margin-bottom:18px;
-
-    border:1px solid #999;
+    border:1px solid #aaa;
 
     border-radius:6px;
 
@@ -282,13 +387,17 @@ textarea{
 
 button{
 
+    width:100%;
+
+    margin-top:20px;
+
+    padding:14px;
+
     background:var(--primary);
 
     color:white;
 
     border:none;
-
-    padding:12px 25px;
 
     border-radius:6px;
 
@@ -333,6 +442,8 @@ textarea:focus{
 
     outline:3px solid gold;
 
+    outline-offset:3px;
+
 }
 
 /* ==================================================
@@ -357,6 +468,18 @@ nav{
 
 }
 
+header h1{
+
+    font-size:48px;
+
+}
+
+.hero h2{
+
+    font-size:38px;
+
+}
+
 }
 
 /* ==================================================
@@ -365,53 +488,82 @@ nav{
 
 @media (min-width:1024px){
 
+main{
+
+    max-width:1200px;
+
+}
+
 .product-grid{
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
 }
 
 header h1{
 
-    font-size:50px;
+    font-size:54px;
 
 }
 
 }
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:35px;
-    margin-top:30px;
-    margin-bottom:50px;
-}
 
-.product-grid article{
-    background:white;
-    color:black;
-    border-radius:15px;
+/* ==================================================
+   SMALL PHONES
+================================================== */
+
+@media (max-width:480px){
+
+header{
+
     padding:20px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.25);
-    transition:.3s;
+
 }
 
-.product-grid article:hover{
-    transform:translateY(-10px);
+header h1{
+
+    font-size:30px;
+
 }
 
-.product-grid img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    border-radius:12px;
+.hero h2{
+
+    font-size:24px;
+
 }
 
-.product-grid h3{
-    color:#8B0000;
-    margin-bottom:15px;
+main{
+
+    width:95%;
+
+    padding:20px;
+
 }
 
-.product-grid p{
-    margin-top:15px;
+table{
+
+    display:block;
+
+    overflow-x:auto;
+
+    white-space:nowrap;
+
 }
+
+}
+
+/* ==================================================
+Reflection:
+
+The desktop breakpoint (1024px) was the most
+challenging because I wanted the product cards
+to automatically resize without breaking the
+layout. I solved this by using CSS Grid with
+
+repeat(auto-fit, minmax(250px,1fr))
+
+which lets the cards adjust smoothly to
+different screen sizes while maintaining
+consistent spacing.
+
+================================================== */
